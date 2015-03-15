@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>IAIC</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1><a href="#">Práctica 1: Representación y búsqueda</a></h1>
+<h2>Autores: Javier Salcedo  Gómez, Carlos Loredo Iglesias, David Hernández Plaza</h2>
+</div>
+
+<div id="content">
+<div class="right"> 
+
+<h2><a href="#">Implementación de los Juegos </a></h2>
+<div class="articles">
+  <p>Garrafas:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. El tablero  final se define como (2, _ ).</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Almacena el contenido de las dos garrafas y aplica  los distintos operadores comprobando las restricciones a la hora de aplicar un  operador .</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Halla la diferencia que hay entre el  contenido de la garrafa de 4   litros y los 2 litros que debemos tener para terminar el  juego. Cuanto menor sea la diferencia mejor será el valor heurístico devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Granjero:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. El tablero  final se define como (false,false,false,false).</p>
+  <p>&nbsp;</p>
+  <p>Tablero: El tablero de este juego almacena en que lado esta  cada componente del problema. Asumiendo que TRUE será el lado izquierdo y FALSE  el lado derecho. Los operadores definidos servirán para mover un componente de  un lado al otro, para ello tenemos _granjero que mueve al granjero de un lado  al otro del rió, _cabra que moverá a la cabra y al granjero de un lado al otro  del rió, _lobo que moverá al lobo y al granjero de un lado al otro del rió y  _col que moverá a la col y al granjero de un lado al otro del rió. Para poder  aplicar los operadores debemos comprobar ciertas restricciones impuestas por el  problema.</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Analizamos si todos los componentes están  en el lado derecho, para ello comprobamos que no están en el lado izquierdo.  Por cada componente que no este en el lado izquierdo se suma un punto. Cuantos  mas componentes estén en el lado derecho mejor será su valor heurístico.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Hanoi3:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. Para  terminar este juego todos los bloques deben estar en la tercera columna y deben  estar ordenados por tamaños, siendo el pequeño el quemas arriba este. El estado  final será (B,C,3).</p>
+  <p>&nbsp;</p>
+  <p>Tablero: A cada tipo de ficha le asignamos un carácter, a la  ficha pequeña le asignamos el carácter A, a la ficha mediana el carácter B, a  la ficha grande el carácter C. Representamos que tienen debajo cada ficha o en  su defecto en que columna se encuentran si no tiene ninguna ficha debajo. Los  operadores que definimos son los desplazamientos de las fichas entre las  columnas, siempre y cuando no tengan ninguna otra ficha encima. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: La función heurística calcula la  distancia de manhattan de todas las fichas de nuestro tablero, respecto a su posición  final. Cuanto menor sea la suma de todas las distancias, mejor será el valor heurístico  devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Laberinto:</p>
+  <p>Estado Final: En esta clase comprobamos si nuestra posición  actual es igual a la posición de la casilla de salida. En el caso de ser  iguales, se acaba el juego con éxito en caso contrario se sigue la búsqueda. </p>
+  <p>&nbsp;</p>
+  <p>Tablero: Para saber como es el tablero almacenamos si las  casillas con caminos o muro. También debemos saber nuestra posición actual,  para poder movernos a través de las casillas. Los operadores serán los nuestros  posibles movimientos arriba, abajo, izquierda o derecha. Los cuales siempre serán  aplicables a no ser que nos movamos hacia un muro o nos salgamos del laberinto.</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Calculamos la distancia desde nuestra  casilla actual hasta la casilla de salida. Cuanto menor sea esa distancia mejor  será el valor heurístico devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Misioneros:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. Se llegara  al estado final de este juego cuando no quede nadie en la orilla izquierda  (0,0,_).</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Almacenaremos cuantos caníbales y cuantos  misioneros hay en el lado izquierdo, ya que los que no estén en esta orilla deberán  estar en la orilla derecha. También almacenamos la posición de la barca para  saber hacia que lado podemos cruzar. Los operadores nos indican quien y cuantos  cruzan, sabiendo que en el bote solo caben 2 personas. Los operadores serán  aplicables siempre y cuando se respeten las restricciones impuestas por el  problema, que nos indica que nunca pueden haber en una orilla mas caníbales que  misioneros.</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Sumamos cuantos caníbales y misioneros  hay en la orilla izquierda. Cuantas menos personas haya en el lado izquierdo  mejor será su valor heurístico. </p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Mono: </p>
+  <p>Estado Final: Este juego finalizara cuando la función que  comprueba si el plátano esta en posesión del mono devuelve cierto. </p>
+  <p>&nbsp;</p>
+  <p>Tablero: Almacenamos la posición del mono, la caja y el plátano.  También almacenamos a que altura esta el mono y si tiene o no el plátano en su  poder. Los operadores nos indican que acciones puede realizar el mono. Estos  operadores serán solo aplicables cuando estas respeten las restricciones  impuestas por el problema.</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Evaluamos el estado de las variables y de  su relación, lo que nos dará un valor relativo de la lejanía del mono al plátano.  Cuanto menor sea la lejanía del mono respecto del plátano mejor valor heurístico  será devuelto. </p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado</p>
+</div>
+
+<div class="articles">
+  <p>Negras-Blancas:</p>
+  <p>Estado Final: En esta clase se comprueba que todas las  fichas negras estén en la izquierda a través de una función, si esta función  devuelve cierto se acaba el juego con éxito, en caso contrario se sigue la búsqueda. </p>
+  <p>&nbsp;</p>
+  <p>Tablero: Representamos que tipo de ficha esta en cada posición  del tablero. Para poder mover las fichas solo debemos mover el hueco hacia la  izquierda o la derecha tantas casillas como nos sea posible, por ello los  operadores solo mueven el hueco y desplazan el resto de las fichas. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Evaluamos cuantas fichas negras quedan  por llevar hacia la mitad izquierda. Cuantos menos fichas negras queden por  llevar hacia la mitad izquierda mejor será el valor heurístico devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado</p>
+</div>
+
+<div class="articles">
+  <p>Pollitos:</p>
+  <p>Estado Final: En esta clase se define el tablero con el  estado final y se compara con el tablero actual. En el caso de ser iguales, se  acaba el juego con éxito en caso contrario se sigue la búsqueda. Para este  juego el estado final será cuando todos los huevos se hayan convertido en  pollitos.</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Debemos guardar en que estado se encuentra cada  pollito para después poder modificarlo. Los operadores nos servirán para elegir  un huevo y saber todos sus vecinos, que pasaran al estado siguiente del que se  encuentren. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Evaluamos para cada huevo del tablero su  situación y a que distancia esta del estado de pollito. Cuanto mayor sea la  distancia mayor cantidad se sumara al contador. Por tanto cuanto menor sea el  contador de distancia mejor será el valor heurístico devuelto. </p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores y guardamos tanto el nuevo tablero como el  operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Puzzle-8:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. En este  juego llegaremos al estado final cuando todas las fichas estén colocadas en  orden y el hueco este en el medio.</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Guardaremos que numero está en cada posición del  tablero y la posición del hueco. Los operadores se dedicaran a intercambiar el  hueco con alguno de los números adyacentes, dependiendo del operador que elijamos  aplicar. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: : La función heurística calcula la  distancia de manhattan de todas los números de nuestro tablero, respecto a su posición  final. Cuanto menor sea la suma de todas las distancias, mejor será el valor heurístico  devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+</div>
+
+<div class="articles">
+  <p>Reinas:</p>
+  <p>Estado Final: Para saber si estamos en el estado final de  este juego comprobamos por medio de funciones si están colocadas todas las  reinas y además no se atacan entre ellas. Para comprobar los ataques  comprobamos que no existen dos reinas en la misma columna, fila y diagonales  izquierda y derecha.</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Utilizaremos un tablero en el que indicaremos si  sus casillas están ocupadas por reinas o no. El único operador posible será  poner una reina en una casilla y marcar esta como ocupada. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Cuantas menos reinas queden por poner  mejor valor tendrá la heurística.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Buscamos posiciones del tablero que no estén  atacadas por otras reinas. Si encontramos una que no este atacada guardamos esa  posición en una lista de sucesores. </p>
+</div>
+
+<div class="articles">
+  <p>Robot Limpiador:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. Llegaremos  al estado final cuando todas las habitaciones se encuentren limpias.</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Almacenaremos el estado de las habitaciones para  poder decidir si hay que limpiarla o no. Los operadores definidos serán los  movimientos del robot entre las habitaciones y la acción de limpiar la habitación  en la que se encuentre.</p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Recorremos todas las habitaciones  comprobando si están limpias o no. Cuanto menor sea el numero de habitaciones  no limpias mejor será el valor heurístico devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado. </p>
+  </div>
+
+<div class="articles">
+  <p>Viaje:</p>
+  <p>Estado Final: En esta clase se define un nuevo tablero con  el estado final y se compara con el tablero actual. En el caso de ser iguales,  se acaba el juego con éxito en caso contrario se sigue la búsqueda. El estado  final será cuando nos encontremos en la ciudad de Almería.</p>
+  <p>&nbsp;</p>
+  <p>Tablero: Debemos almacenar en que ciudad nos encontramos y  cuales son nuestras ciudades adyacentes para poder movernos entre ellas. Los  operadores será el viaje hasta una ciudad. Este viaje solo será posible si la  ciudad destino es adyacente a la ciudad en la que nos encontramos. Al movernos  cambiaremos nuestras situación actual a la ciudad a la que hemos viajado. </p>
+  <p>&nbsp;</p>
+  <p>Función Heurística: Observamos la distancia que existe desde  el estado en el que nos encontramos hasta el estado objetivo. Cuanto menor sea  esta distancia mejor sera el valor heurístico devuelto.</p>
+  <p>&nbsp;</p>
+  <p>Función sucesor: Hacemos una copia de nuestro tablero y le  aplicamos los distintos operadores. Si ha sido posible aplicarle ese operador,  guardamos el nuevo tablero y el operador aplicado.</p>
+</div>
+
+</div>
+
+<div class="left"> 
+
+<h2>Enlaces :</h2>
+<ul>
+   <li><a href="index.html">Inicio</a></li>
+   <li><a href="implementacion.html">Implementación del micromundo</a></li>
+   <li><a href="implementacion2.html">Implementación de los juegos</a></li>
+   <li><a href="uso.html">Uso</a></li>
+   <li><a href="analisis.html">Análisis</a></li>
+   <li><a href="conclusiones.html">Conclusiones</a></li>
+</ul>
+
+<h2>Juegos</h2>
+<ul>
+<li><a href="#">Garrafas</a></li> 
+<li><a href="#">Granjero</a></li> 
+<li><a href="#">Hanoi</a></li> 
+<li><a href="#">Laberinto</a></li>
+<li><a href="#">Misioneros</a></li> 
+<li><a href="#">Mono</a></li>
+<li><a href="#">Negras-Blancas</a></li>
+<li><a href="#">Pollito</a></li>
+<li><a href="#">Puzzle-8</a></li>
+<li><a href="#">Reinas</a></li>
+<li><a href="#">Robot Limpiador</a></li>
+<li><a href="#">Viaje</a></li>
+</ul>
+
+
+</div>
+
+</div>
+<div style="clear: both;"> </div>
+
+<div id="footer">
+  <div id="div">Implementación juegos realizada por  Javier Salcedo y David Hernández </div>
+</div>
+</div>
+
+</body>
+</html>

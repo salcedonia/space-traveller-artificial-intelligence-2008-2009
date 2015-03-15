@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>IAIC</title><meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" /></head>
+
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1><a href="#">Práctica 1: Representación y búsqueda</a></h1>
+<h2>Autores: Javier Salcedo  Gómez, Carlos Loredo Iglesias, David Hernández Plaza</h2>
+</div>
+
+<div id="content">
+<div class="right"> 
+
+<h2><a href="#">Implementación del micromundo</a></h2>
+<div class="articles">
+  
+  <p style="text-indent: 15px; margin-bottom: 12px">La conjunción problema/juego y
+algoritmo de búsqueda la representamos con el concepto de <b>Viaje</b>. Un
+viaje entre dos planetas &nbsp;es posible si el algoritmo asignado al
+problema/juego de ese viaje es capaz de encontrar una solución.
+Cada planeta del micromundo posee unas coordenadas e información sobre el
+viaje al planeta inmediatamente arriba y al planeta inmediatamente a la
+derecha.En el caso de viajar hacia a la derecha o hacia
+arriba, los datos de ese viaje están asociados&nbsp;al&nbsp;planeta
+desde el que se viaja. En el caso de que viajemos hacia abajo o hacia
+la izquierda los datos del viaje serán accesibles desde el planeta
+destino utilizando&nbsp;la dirección opuesta escogida para llegar hasta
+	él.</p>
+  <p style="text-indent: 15px; margin-bottom: 12px">Los juegos que pueden ser
+asignados&nbsp;a&nbsp;cada viaje tienen una <b>dificultad preestablecida</b>.
+Esta dificultad se traduce en el coste que tiene desplazarse de un
+planeta a otro utilizando el viaje correspondiente.</p>
+	<p style="text-indent: 15px; margin-bottom: 12px">Las dificultades son:</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>GARRAFAS:</b> dificultad 1.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>GRANJERO:</b>>dificultad 2.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>MISIONEROS:</b>&nbsp;dificultad 3.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>VIAJE:</b>&nbsp;dificultad 4.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>LABERINTO:</b>&nbsp;dificultad 5.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>HANOI3:</b> dificultad 6.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>PUZZLE8:</b> dificultad 7.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>MONO:</b> dificultad 8.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>ROBOT_LIMPIADOR:</b> dificultad 9.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>NEGRAS_BLANCAS:</b> dificultad 10.</p>
+	<p style="text-indent: 15px; margin-bottom: 6px; margin-left:20px"><b>POLLITOS:</b>&nbsp;dificultad 11.</p>
+	<p style="text-indent: 15px; margin-bottom: 12px; margin-left:20px"><b>REINAS:</b>&nbsp;dificultad 12.</p></p>
+	<p style="text-indent: 15px; margin-bottom: 12px">Una
+vez generado o cargado nuestro micromundo, creamos un nuevo problema
+predefinido en la <b>librería AIMA</b>. A este problema le damos como
+parámetros la función sucesor, el estado final, la función de coste y
+la función heurística. Este problema se lo pasamos a la clase <b>
+	ResolutorProblemas</b>, la cual se encargará de resolver el camino para
+llegar a los planetas objetivos con el tipo de búsqueda que debe
+realizar y que hemos debido indicar previamente en el menú<span lang="es"> 
+	usando la clase <b>SearchAgent</b> de <b>AIMA</b></span>.
+Para este problema seguimos la misma estrategia que para 
+la resolución de cada uno de los problemas correspondientes a los viajes: Se 
+crea un nuevo hilo de ejecución con un máximo tiempo de resolución. Si 
+pasado ese tiempo o si ha devuelto algún resultado antes de que el tiempo 
+expire entonces paramos el nuevo hilo y tratamos la solución (o no) 
+obtenida. 
+</p>
+<p style="text-indent: 15px; margin-bottom: 12px">También
+podemos indicar a través del menú si queremos que el camino para el
+micromundo y los juegos se resuelva con <b>control de ciclos</b> o sin el y
+así se lo indicaremos al <b>ResolutorProblemas</b>. Este resolutor nos
+indicará cuales son los caminos menos costosos desde el centro hasta
+las esquinas. Cada vez que avancemos por nuestro mundo el resolvedor
+creará un nuevo problema por si encuentra algún camino con mejor coste
+que el encontrado anteriormente. También podemos desactivar este
+resolvedor y hacer el camino por nuestra cuenta.</p>
+<p style="text-indent: 15px; margin-bottom: 12px">Para el <b>control de ciclos</b> se emplea una estructura HashMap 
+que se encarga de guardar todos los estados por los que va pasando la nave y 
+luego a la hora de aplicar el operador correspondiente comprueba si el nuevo 
+estado al que accedemos se encuentra en la estructura. De ser así no 
+se aplica dicho operador evitando así la generación de ciclos y si no el 
+nuevo estado no está en dicha estructura se aplica el operador y se guarda 
+en ella.</p>
+<p style="text-indent: 15px; margin-bottom: 12px">Una
+vez resuelto el micromundo y hallados los caminos que nos llevan hasta
+nuestros destinos, solo tenemos que movernos a través de nuestro
+micromundo con los botones de <b>izquierda</b>, <b>derecha</b>, <b>arriba</b> o 
+<b>abajo</b>. Cada
+vez que pulsemos unos de estos botones intentaremos viajar a un nuevo
+planeta, pero esto no siempre será posible, ya que para poder realizar
+este viaje debemos resolver el problema que tiene asociado con su
+búsqueda asignada.</p>
+  <p style="text-indent: 15px; margin-bottom: 12px">Todos los viajes deben
+pasar por el gestor de viajes el cual posee una lista con las
+soluciones de los viajes ya realizados y que pudieron ser realizados.
+Esta <b>caché de viajes</b> es muy útil cuando tenemos que realizar una vuelta
+atrás en nuestro viaje porque tardaremos menos tiempo en saber la
+solución de un problema ya resuelto. Esta opción <u>puede desactivarse</u>
+para que todos los problemas deban ser resueltos siempre que se realice
+el mismo viaje. </p>
+  <p style="text-indent: 15px; margin-bottom: 12px">Si la <b>caché de viajes</b> está desactivada el micromundo llamará a <b>ResolutorProblemas</b> y le pasará todos los 
+	datos que tenga del viaje, el juego, la función sucesor, el estado final, la 
+	función heurística y el tipo de búsqueda para resolver dicho viaje. Este resolvedor intenta resolver 
+	el problema, si consigue hacerlo devuelve datos acerca de la solución y sus 
+	pasos intermedios. <b>ResolutorProblemas</b> informa al micromundo de si ha 
+	sido posible resolver el problema. Este micromundo muestra en un cuaderno 
+	bitácora la solución devuelta por el gestor de problemas. 
+	Por el contrario si la caché está activada, simplemente se limitará a comprobar si la 
+	<b>caché de viajes</b>
+	contiene al viaje a resolver, ahorrando el tiempo del cálculo y siendo más rápido y efectivo.</p>
+  <p style="text-indent: 15px; margin-bottom: 12px">Mediante la función <b>muestra 
+	solución</b>, mostramos en pantalla los caminos que debemos 
+  seguir para encontrar a los planetas objetivo. La representación 
+  empleada muestra las casillas accesibles a las que se puede acceder desde
+  otra casilla con la aplicación del operador correspondiente.
+  La solución está representada de forma que dos planetas 
+  contiguos tienen solución pero esto no significa <u>necesariamente</u> que se 
+  puedan acceder entre sí. Simplemente se ilustra que se accederán por caminos
+  diferentes pero no directamente entre sí.</p>
+</div>
+
+</div>
+
+<div class="left"> 
+<h2>Enlaces :</h2>
+<ul>
+   <li><a href="index.html">Inicio</a></li>
+   <li><a href="implementacion.html">Implementación del micromundo</a></li>
+   <li><a href="implementacion2.html">Implementación de los juegos</a></li>
+   <li><a href="uso.html">Uso</a></li>
+   <li><a href="analisis.html">Análisis</a></li>
+   <li><a href="conclusiones.html">Conclusiones</a></li>
+   </ul>
+</div>
+
+</div>
+<div style="clear: both;"> </div>
+
+<div id="footer">Implementación realizada por Carlos Loredo y Javier Salcedo </div>
+</div>
+
+</body></html>

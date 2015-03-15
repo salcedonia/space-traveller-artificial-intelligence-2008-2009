@@ -1,0 +1,692 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>IAIC</title><meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" /></head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1><a href="#">Práctica 1: Representación y búsqueda</a></h1>
+<h2>Autores: Javier Salcedo  Gómez, Carlos Loredo Iglesias, David Hernández Plaza</h2>
+</div>
+
+<div id="content">
+<div class="right"> 
+
+<h2><a href="#">Análisis</a></h2>
+<div class="articles">
+  <p><u> Micromundo Aleatorio:</u></p>
+  <p>Micromundo generado aleatoriamente. </p>
+  <p>&nbsp;</p>
+  <p>Primero en Anchura Sin Control de Ciclos:  </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de resolverlo</p>
+  Primero en Anchura Con Control de Ciclos: <br />
+  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 54<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 103</p><p>&nbsp;</p>
+  <p>Primero en profundidad Sin Control de Ciclos:&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 85 </p>
+  <p>Primero en profundidad Con Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 85 </p>
+  <p>&nbsp;</p>
+  <p>Limite en Profundidad Sin Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 73</p>Limite en Profundidad Con Control de Ciclos: <br /><p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 15<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 103</p><p><br />
+    </p>
+  <p>Coste Lineal Sin Control de Ciclos:&nbsp;</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de resolverlo</p>
+  Coste Lineal Con Control de Ciclos:<br />
+  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 50<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 85</p><p>&nbsp;</p>
+<p>Profundidad Iterativa Sin Control de Ciclos:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 8281 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos:  186014<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 103 </p>
+<p>&nbsp;Profundidad Iterativa Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado:  1 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos:  14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 85 </p>
+<p>&nbsp;</p>
+<p>A* Sin Control de Ciclos: </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de resolverlo</p>
+A* Con Control de Ciclos: <br />
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 48<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 85</p>
+<p><br />
+    Voraz Sin Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 86</p>
+  <p>Voraz Con Control de Ciclos: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 103 </p>
+  <p>&nbsp;</p>
+  <p>Enfriamiento Simulado Sin Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 47 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 86</p>
+  <p>Enfriamiento Simulado Con Control de Ciclos:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 80 </p>
+  <p>&nbsp;</p>
+  <p>Conclusiones:
+Los algoritmos que avanzan directos a las solución sin explorar todo o
+parte del espacio de estados llegan a alcanzar una solución. Si
+activamos el control de ciclos, algunos de los algoritmos que no
+llegaban a una solución ahora lo consiguen gracias a que ya no repiten
+estados no prometedores. </p>
+</div>
+
+<div class="articles">
+  <p><u> Micromundo 1:</u></p>
+  <p>Micromundo cargado desde archivo micromundo_dificultad_8</p>
+  <p>&nbsp;</p>
+  <p>Primero en Anchura Sin Control de Ciclos: </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de resolverlo.</p>
+  Primero en Anchura Con Control de Ciclos: <br />
+  <p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 54 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60 </p>
+  <p>&nbsp;</p>
+  <p>Primero en profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 177328 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 19174<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 153329</p>
+  <p> Primero en profundidad Con Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 15 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 63 </p>
+  <p>&nbsp;</p>
+  <p>Limite en Profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado:  688 ms.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60 </p>
+  <p>Limite en Profundidad Con Control de Ciclos: <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60 </p>
+  <p>&nbsp;</p>
+  <p>Coste Lineal Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de resolverlo.</p>
+  Coste Lineal Con Control de Ciclos:<br />
+  <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 47 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 48<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 49 </p>
+  <p>&nbsp;</p>
+  <p>Profundidad Iterativa Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 8234 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 145795<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60</p>
+  <p>Profundidad Iterativa Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 2 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>&nbsp;</p>
+  <p>A* Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 9719 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 101463<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 49 </p>
+  A* Con Control de Ciclos: <br />
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 47 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 44<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 49 </p>
+  <p><br />
+  Voraz Sin Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 407 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60 </p>
+  <p>Voraz Con Control de Ciclos: <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 60 </p>
+  <p>&nbsp;</p>
+  <p>Enfriamiento Simulado Sin Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 437 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>Enfriamiento Simulado Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 47 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>&nbsp;</p>
+  <p>Conclusiones: Al tratarse de un micromundo solo con problemas de dificultad maxima 8 algunos de los algoritmos son capaces de resolverlo sin el control de ciclos. De los algortimos con cotrol de ciclo podemos destacar los pocos pasos que realiza el algotimo A* y el poco tiempo que tarda en encontrar la solución los algoritmos que avanzan en profunidad. Todos los problemas que avanzan enprofundidad son capaces de encontrar la solución gracias al orden en la aplicación de los operadores. </p>
+</div>
+
+<div class="articles">
+  <p><u>Micromundo 2:</u></p>
+  <p>Micromundo cargado desde archivo micromundo_dificultad_10 </p>
+  <p>&nbsp;</p>
+  <p>Primero en Anchura Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p>Primero en Anchura Con Control de Ciclos: <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 141 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 54<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <br />
+  <p>Primero en profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p> Primero en profundidad Con Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 74 </p>
+  <p>&nbsp;</p>
+  <p>Limite en Profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  Limite en Profundidad Con Control de Ciclos: <br />
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p><br />
+  Coste Lineal Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p>Coste Lineal Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos:  49 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p>&nbsp;</p>
+  <p>Profundidad Iterativa Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado:  7469 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos:  145795<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p>Profundidad Iterativa Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 2<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p><br />
+        A* Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  A* Con Control de Ciclos: <br />
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado:15 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos:47<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+        <p><br />
+  Voraz Sin Control de Ciclos: </p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p>Voraz Con Control de Ciclos: <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p>&nbsp;</p>
+  <p>Enfriamiento Simulado Sin Control de Ciclos: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1 ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>Enfriamiento Simulado Con Control de Ciclos: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>&nbsp;</p>
+  <p>Conclusiones: Los problemas que existen en este juego son de dificultad máxima 10, lo que impide que algunos algoritmos encuentren una solución adecuada. Los algoritmos que exploran el espacio de estados no consigen encontrar la solución mientras, los que se dirigen hacia la solución en profundidad si llegan a ella incluso sin el control de ciclos en algunos casos. </p>
+</div>
+
+<div class="articles">
+  <p><u>Micromundo 3:</u></p>
+  <p>Micromundo cargado desde archivo micromundo_dificultad_12 </p>
+  <p>&nbsp;</p>
+  <p>Primero en Anchura Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  Primero en Anchura Con Control de Ciclos: <br />
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 47 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 54<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 100 </p>
+  <p><br />
+  Primero en profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p> Primero en profundidad Con Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 83 </p>
+  <p>&nbsp;</p>
+  <p>Limite en Profundidad Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  Limite en Profundidad Con Control de Ciclos: <br />
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 15<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 100 </p>
+  <p>&nbsp;</p>
+  <p>Coste Lineal Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p>Coste Lineal Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 47 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p>&nbsp;</p>
+  <p>Profundidad Iterativa Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p>&nbsp;Profundidad Iterativa Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 2 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 0 </p>
+  <p>&nbsp;</p>
+  <p>A* Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  A* Con Control de Ciclos: <br /><p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 44<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 62 </p>
+  <p><br />
+  Voraz Sin Control de Ciclos:</p>
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz de resolverlo. </p>
+  <p>Voraz Con Control de Ciclos: <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 16 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 100 </p>
+  <p>&nbsp;</p>
+  <p>Enfriamiento Simulado Sin Control de Ciclos:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 63 ms <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>Enfriamiento Simulado Con Control de Ciclos:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: Desconocido </p>
+  <p>&nbsp;</p>
+  <p>Conclusiones: En este mapa ya tenemos todos los juegos disponibles por tanto la resolución del  micromundo se complica bastante, esto hace que el control de ciclos se vuelva fundamental, ya que sin él ningún algoritmo es capaz de encontrar una solución. Con el control de ciclos activado se puede comprobar como los algoritmos que avanzan en profundidad encuentran la solución en menos tiempo que las que exploran el espacio de estados en horizontal. </p>
+</div>
+
+<div class="articles">
+  <p><u>Garrafas:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 391 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 295<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 6<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 125ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 557<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 6<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en profundidad: <br />
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 246<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 20<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coste Lineal:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 79 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 545<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 6<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A*:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 259.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 6<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Voraz:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p> Conclusiones: Este problema al ser bastante simple la aplicación de un
+algoritmo informado y no informado no influye mucho a la hora de
+obtener el resultado en un buen tiempo. Los nodos expandidos si
+dependen un poco del algoritmo usado, ya que en algunos se expanden
+casi el doble respecto de A*, lo que nos indica que estrategia
+utilizada para los métodos informados es buena. El algoritmo en
+profundidad no encuentra la solución a tiempo debido a que no tiene
+control de ciclos. Los algoritmos voraz y el enfriamiento simulado no
+consiguen encontrar la solución porque todos los estados tienen un
+valor heurística parecido. </p>
+</div>
+
+<div class="articles">
+  <p><u>Granjero:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 234 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 100<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 7<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 15 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 110<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 7<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad: No pudo  solucionarlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limite en Profundidad: <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 1ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 49<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 21<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coste Lineal:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 47 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 143<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 7<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A*:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 31 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 326<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Numero de Pasos 7<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p>Conclusiones:
+Al igual que en el problema de las garrafas, los algoritmos de búsqueda
+desinformados obtienen unos resultados parecidos a los que se obtienen
+con búsquedas informadas. En este caso la heurística que hemos
+implementado no termina de ser muy buena ya que expande mas nodos que
+alguna de las búsquedas desinformadas o no encuentra una solución. Al
+igual que en las garrafas el algoritmo de primero en profundidad no
+encuentra la solución porque se mete en ramas infinitas.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Hanoi3:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 297 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 844<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 7<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 109 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 1578<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 7<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad: No fue capaz  de solucionarlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limite en Profundidad:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 16 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 548<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Numero de Pasos 21<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Coste Lineal:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 47<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 871<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 7<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A*:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 16<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 45<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 7<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p> Conclusiones: Para este caso, al ser un juego mas complicado el
+algoritmo informado A* resuelve el problema en menos tiempo y
+expandiendo menos nodos que los no informados. Por lo que consideramos
+que tenemos una heurística muy buena. Los algoritmos voraz y el
+enfriamiento simulado no consiguen encontrar la solución porque todos
+los estados tienen un valor heurístico parecido y pueden llegar a un
+mínimo local que lo bloquea. </p>
+</div>
+
+<div class="articles">
+  <p><u>Laberinto:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa: No fue capaz  de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en Anchura: No fue capaz  de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad: No fue  capaz de resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Limite en Profundidad:  No fue  capaz de resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Coste Lineal:  No fue capaz de  resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A*: No fue capaz de resolverlo<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:&nbsp;No fue capaz  de resolverlo <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de resolverlo.</p>
+  <p>&nbsp;</p>
+  <p> Conclusiones: Estos resultados nos hacen ver la dificultad de este
+problema, ya que ningún algoritmo no&nbsp;informado fue capaz de
+encontrar la solución a tiempo. También nos demuestra lo difícil que es
+implementar una buena heurística, ya que en este caso los algoritmos
+informados tampoco han conseguido llegar a la solución a tiempo por no
+tener una buena heurística.</p>
+</div>
+
+<div class="articles">
+  <p><u>Misioneros:</u><br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profundidad Iterativa: <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 281 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 13434<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 11<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en Anchura:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: &nbsp;578<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 17817<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Numero de Pasos 11<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Primero en profundidad: No Fue Capaz  de resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Limite en Profundidad:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 16 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 3825<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 21<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coste Lineal:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 281 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 27865<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 11<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A*:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 79<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 979<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 11<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Voraz:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 1 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 27<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Numero de Pasos: 11 <br /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p> Conclusiones: Al igual que en el juego de Hanoi al tratarse de un juego
+complicado los algoritmos no informados tardan mas tiempo y expanden
+más nodos que las informados. También podemos considerando estos
+resultado que la heurística implementada es muy buena.</p>
+</div>
+
+<div class="articles">
+  <p><u>Mono:</u> <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 110 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 28<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 5<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en Anchura:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 1 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 34<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 5<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad: No fue capaz  de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limite en Profundidad:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 1 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 28<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 21<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coste Lineal:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 16<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 26<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 5<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A*:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 1 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 18<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 5<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.</p>
+  <p><br />
+Conclusiones: Estos resultados nos indican que no se trata de un juego
+muy complicado, ya que los todos los algoritmos tardan un tiempo
+similar en encontrar la solución y expanden el un numero parecido de
+nodos. Los algoritmos voraz y el enfriamiento simulado no consiguen
+encontrar la solución porque todos los estados tienen un valor
+heurístico parecido. </p>
+</div>
+
+<div class="articles">
+  <p><u>Negras-Blancas:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa: No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura:  No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en profundidad: No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad: No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coste Lineal: No fue capaz de  resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A*: <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 62<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 2305<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 14<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Tiempo empleado: 1ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 29 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 19 &nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p> Conclusiones: Los algoritmos no informados fueron incapaces de
+encontrar la solución dentro del tiempo limite, lo que nos hace ver que
+se trata de un juego con muchas posibilidades que hace imposible
+encontrar la solución. Los algoritmos A* y voraz encuentran la solución
+gracias a que poseen una heurística aceptable. </p>
+</div>
+
+<div class="articles">
+  <p><u>Pollitos:</u><br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Profundidad Iterativa: No fue capaz  de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en Anchura: : No fue capaz  de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad: : No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad: : No fue  capaz de resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coste Lineal: : No fue capaz de  resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A*: Tiempo empleado: 328 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 3547<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 13<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:&nbsp;No fue capaz  de solucionarlo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de solucionarlo.</p>
+  <p></p>
+  <p> Conclusiones: La cantidad de posible configuraciones del tablero y la
+multitud de operadores han impedido a los algoritmos no informados
+encontrar la solución a tiempo. Sin embargo el algoritmo A* si es capaz
+de encontrarla gracias a que su heurística predice bien lo que va a
+costarnos llegar al estado final.</p>
+  </div>
+<div class="articles">
+  <p><u>Puzzle-8:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa: No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura: No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en profundidad: No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad: No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coste Lineal: No fue capaz de  resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A*: No fue capaz de resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:&nbsp;No fue capaz  de solucionarlo.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de solucionarlo.</p>
+  <p><br />
+Conclusiones: Estos resultados nos hacen ver la dificultad de este
+problema, ya que ningún algoritmo no&nbsp;informado fue capaz de
+encontrar la solución a tiempo. También nos demuestra lo difícil que es
+implementar una buena heurística, ya que en este caso los algoritmos
+informados tampoco han conseguido llegar a la solución a tiempo por no
+tener una buena heurística.</p>
+</div>
+<div class="articles">
+  <p><u>Reinas:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 250 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 3656<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 8<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en Anchura:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: &nbsp;47 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 1965<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos:&nbsp; 8<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Primero en profundidad:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 31 ms<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 113<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 8<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Limite en Profundidad:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 1 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 113<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 8 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coste Lineal: No fue capaz de  resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A*:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 1 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 146<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos: 8<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Tiempo empleado: 32ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 72 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos: 8 &nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de solucionarlo.</p>
+  <p><br />
+Conclusiones: Aquí podemos observar como el algoritmo de primero en
+profundidad se comporta muy bien porque no existen ramas infinitas. Del
+resto de algoritmos cabe destacar el A*, limite en profundidad y voraz
+por el escaso tiempo que tardan en encontrar la solución y los pocos
+nodos que expande. El resto de algoritmos encuentra la solución en un
+tiempo aceptable pero a costa de expandir muchos mas nodos.</p>
+  </div>
+<div class="articles">
+  <p><u>Robot  Limpiador:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa: No fue capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura: : No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en profundidad: : No fue  capaz de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad: : No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coste Lineal: : No fue capaz de  resolverlo<br />
+   &nbsp;&nbsp;&nbsp;&nbsp; A*:: No fue capaz de resolverlo<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Voraz:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Tiempo empleado: 1ms<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 26 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 17 &nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p>Conclusiones:
+Estos resultados nos hacen ver la dificultad de este problema, ya que
+ningún algoritmo no&nbsp;informado fue capaz de encontrar la solución a
+tiempo. También nos demuestra lo difícil que es implementar una buena
+heurística, ya que en este caso solo el algoritmo voraz ha conseguido
+llegar a la solución a tiempo.</p>
+</div>
+<div class="articles">
+  <p><u>Viaje:</u><br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Profundidad Iterativa:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 375 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 13<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 3<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en Anchura:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 32 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 28<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Numero de Pasos 3<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Primero en profundidad: No fue capaz  de resolverlo<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite en Profundidad:<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 1 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 35<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 21<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coste Lineal:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tiempo empleado: 47 ms<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nodos: 24<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero de Pasos 3<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  A*:<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiempo empleado: 31 ms<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nodos: 6 <br />
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Numero  de Pasos 3<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Voraz:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Tiempo empleado: 16 ms <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Nodos: 3 <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Numero de Pasos: 3 <br /> 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Enfriamiento Simulado:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No fue capaz  de solucionarlo.<br /></p>
+  <p>Conclusiones:
+Al igual que en otros mucho juegos, el algoritmo de primero en
+profundidad no encuentra la solución por existir ramas infinitas. Del
+resto de algoritmos cabe destacar la buena heurística implementada ya
+que para el A* solo se expanden 6 nodos y el algoritmo voraz 3 nodos. </p>
+</div>
+
+</div>
+
+<div class="left"> 
+<h2>Enlaces :</h2>
+<ul>
+   <li><a href="index.html">Inicio</a></li>
+   <li><a href="implementacion.html">Implementación del micromundo</a></li>
+   <li><a href="implementacion2.html">Implementación de los juegos</a></li>
+   <li><a href="uso.html">Uso</a></li>
+   <li><a href="analisis.html">Análisis</a></li>
+   <li><a href="conclusiones.html">Conclusiones</a></li>
+   </ul>
+</div>
+
+</div>
+<div style="clear: both;"> </div>
+
+<div id="footer">
+  <div id="div">Analisis  realizad por Javier Salcedo y David Hernández </div>
+</div>
+</div>
+
+</body></html>

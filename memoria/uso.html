@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>IAIC</title><meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" /></head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1><a href="#">Práctica 1: Representación y búsqueda</a></h1>
+<h2>Autores: Javier Salcedo  Gómez, Carlos Loredo Iglesias, David Hernández Plaza</h2>
+</div>
+
+<div id="content">
+<div class="right"> 
+
+<h2><a href="#">Cómo ejecutar la práctica </a></h2>
+<div class="articles">
+<p>Para compilar el&nbsp; proyecto se puede utilizar Eclipse o Netbeans para importarlo y a continuación compilar.&nbsp;</p><p>El javadoc está generado de esa manera.</p><p>Para ejecutar la práctica basta con utilizar el archivo ejecutar.bat que se encuentra en la carpeta 'aplicacion'.</p><p>También podemos utilizar la consola, movernos hasta el directorio 'aplicacion' de la práctica y ejecutar:</p>java -Xms256M -Xmx256M -cp "..\aima\aima.jar;iaic.jar" main.Main
+ </div>
+<h2><a href="#">Reproducir las pruebas realizadas </a></h2>
+<div class="articles">
+  <p>Las pruebas realizadas para lo juegos se
+pueden reproducir fácilmente ejecutando el método Main de la clase
+TestJuegoBusqueda que se encuentra en el paquete 'juegos'.</p><p>La ejecución devolverá por consola el resultado de probar cada algoritmo de búsqueda con cada juego.</p><p>Con una clase similar se realiza la cache de juegos para luego poder crear los micromundo aleatoriamente.</p><p>Las
+pruebas del micromundo pueden repetirse cargando los micromundos ya
+generados y guardados en los ficheros txt correspondientes de la
+carpeta 'pruebas'.</p><p>Bastará con seleccionar el algoritmo deseado
+mediante la pestaña 'Algoritmos' de la interfaz y a continuacion
+pinchas en el botón 'Resolver'.</p>
+</div>
+
+<h2><a href="#">Explicación de la interfaz</a></h2>
+<div class="articles">
+	A continuación explicamos brevemente cada una de las opciones del interfaz gráfico de la práctica:<br /><ul>
+		<li style="font-weight: bold;">Panel de Navegación</li>
+		<ul>
+			<li>4
+botones de dirección izquierda, derecha, arriba y abajo que desplazarán
+la nave de la posición actual a la posición correspondiente por la
+dirección. Esto solo será posible si el viaje que hay entre ambos
+planetas tiene solución. &nbsp;(búsqueda local)</li>
+			<li><span style="font-style: italic;">Botón
+Resolver</span>: Utiliza un algoritmo de búsqueda para encontrar un camino en
+el micromundo a uno de los planetas objetivo. (búsqueda global)</li>
+			<li><span style="font-style: italic;">Solución
+Micromundo</span>: Nos indica cómo se ha resuelto el micromundo y qué
+direcciónes debemos tomar para llegar a nuestro destino. </li>
+			<li><span style="font-style: italic;">Cuaderno
+Bitácora</span>: Nos informa de lo que se realiza en los viajes entra
+planetas, es decir, la resolución de los juegos con su algoritmo de
+búsqueda correspondiente.</li>
+		</ul>
+		<ul><li><span style="font-style: italic;">Micromundo</span>: muestra
+una representación gráfica del micromundo, planetas objetivo (en verde)
+y dónde se encuentra la nave (en rojo).</li></ul><li style="font-weight: bold;">Menu Micromundo</li><ul><li><span style="font-style: italic;">Mostrar/No mostrar Solución</span>: hace que la representación gráfica muestre el camino en azul a los diferentes planetas objetivo.</li></ul><ul>
+			
+			<li><span style="font-style: italic;">Generar aleatorio</span>: Genera un micromundo aleatorio.</li>
+			<li><span style="font-style: italic;">Establecer
+dificultad máxima</span>: establece la dificultad máxima de los juegos que
+puede haber en los viajes entre planetas del micromundo. Introduciendo
+5 quiere decir que en el micromundo habrá problemas de dificultad de 1
+a 5. Esto sirve para evaluar los algoritmos de búsqueda global ya que a
+mayor variedad de juegos, mayor variedad de costes entre planetas y
+mayor necesidad de cálculos para resolver la búsqueda global. </li>
+			<li><span style="font-style: italic;">Cargar micromundo</span>: carga un micromundo desde un archivo.</li>
+			<li><span style="font-style: italic;">Guardar micromundo</span>: guarda el micromundo actual a un archivo.</li></ul><li style="font-weight: bold;">Menu Resolvedor</li><ul>
+			<li><span style="font-style: italic;">Activar/Desactiva&nbsp;resolvedor</span>:
+permite se recalcule la solución del micromundo cada vez que se
+utilizan los botones del panel de navegación para mover la nave.</li>
+			<li><span style="font-style: italic;">Establecer
+el tiempo máximo (ms):</span> establece la cantidad de milisegundos que el
+algoritmo actual puede tardar en resolver la solución del micromundo.
+(búsqueda global) </li>
+			<li><span style="font-style: italic;">Activar/desactivar uso de la cache de
+soluciones</span>: permite que en lugar de recalcular si el viaje entre dos
+planetas tiene o no solución sea posible recurrir a una cache con los
+resultados precalculados. Esto ahorra mucho tiempo.</li>
+			<li><span style="font-style: italic;">Regenerar&nbsp;cache
+de soluciones</span>: vuelve a recalcular la cache de soluciones probando cada
+algoritmo en cada problema. Tiene en cuenta si el control de ciclos
+está activado. </li>
+			<li><span style="font-style: italic;">Activar/desactivar control de ciclos</span>:
+permite que los algoritmos de búsqueda lleven un control de ciclos.
+Este control se hace guardando todos los estados generados por el
+algoritmo. </li>
+			</ul><li><span style="font-weight: bold;">Menu Algortimos</span></li></ul>Permite seleccionar el algoritmo de búsqueda utilizado para resolver el micromundo.<ul><ul><br />
+		</ul>
+	</ul>
+	  <img src="images/micromundo.JPG" alt="" align="bottom" height="478" width="492" />
+	  Implementación Realizada por Javier Gomez, Carlos Loredo</div>
+
+<h2><a href="#">Código reutilizado </a></h2>
+<div class="articles">El código para leer archivos XML se ha copiado, en parte, de:<br />http://www.developerfusion.com/code/2064/a-simple-way-to-read-an-xml-file-in-java/<br /><br />Framework AIMA 0.9.2 del que hemos reutilizado:<br />- todos los algoritmos de búsueda presentes en la práctica.<br />- juegos del 8-puzzle y de las 8-reinas.<br /><br />CSS de la guia : www.free-ccs-templates.com</div>
+
+</div>
+
+<div class="left"> 
+<h2>Enlaces :</h2>
+<ul>
+   <li><a href="index.html">Inicio</a></li>
+   <li><a href="implementacion.html">Implementación del micromundo</a></li>
+   <li><a href="implementacion2.html">Implementación de los juegos</a></li>
+   <li><a href="uso.html">Uso</a></li>
+   <li><a href="analisis.html">Análisis</a></li>
+   <li><a href="conclusiones.html">Conclusiones</a></li>
+   </ul>
+</div>
+
+</div>
+<div style="clear: both;"> </div>
+
+<div id="footer"></div>
+</div>
+
+</body></html>

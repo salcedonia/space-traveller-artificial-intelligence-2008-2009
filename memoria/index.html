@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<title>IAIC</title><meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" /></head>
+<body>
+
+<div id="wrap">
+
+<div id="header">
+<h1><a href="index.html">Práctica  1: Representación y búsqueda</a></h1>
+<h2>Autores: Javier Salcedo Gómez, Carlos Loredo Iglesias, David Hernández  Plaza</h2>
+</div>
+
+<div id="content">
+<div class="right"> 
+
+<h2><a href="index.html">Descripción  de la práctica desde nuestro punto de vista</a><a href="#"></a></h2>
+<div class="articles"><strong> </strong>
+  <p>Aunque al principio la
+idea del micromundo con planetas, naves entre planetas, y demás nos
+pareció algo un tanto complicado de representar la representación a la que hemos optado simplifica bastante las cosas.</p><p></p><p>Esta
+representación del micromundo es como si se tratara de un laberinto en
+dos dimensiones en el que las casillas muro son juegos cuyos algoritmos
+no son capaces de resolver y cuyas casillas camino son juegos cuyo algoritmo de búsqueda&nbsp;sí encuentra solución.</p>
+</div>
+<h2><a href="#">Discusión de las representaciones elegidas</a></h2>
+<div class="articles">
+  <p><u>Micromundo:</u><br />
+    <u>Representación:</u><br />
+El micromundo se representa con una matriz de planetas de 15x15 en la
+que cada planeta tiene asignado una posición y dos posibles viajes a
+los planeta de arriba y la derecha. Los 2 viajes restantes se pueden
+calcular reutilizando la información de planetas adyacentes.&nbsp;</p><p>Cada micromundo tiene 1 planeta origen y 4 planetas destino.</p><p>Cada
+viaje entre&nbsp;entre planetas tienen asignado un&nbsp;problema y un
+algoritmo de búsqueda, que puede ser informado o no (búsqueda local).
+Los problemas y los algoritmos de los viajes&nbsp;se pueden generar <u>aleatoriamente</u> o bien cargarlos&nbsp;desde archivo.</p><p>Puede
+darse el caso que, debido al algoritmo de generación aleatorio, solo se
+produzcan caminos para 3 de los 4 planetas origen. En ese caso bastará
+con crear de nuevo, aleatoriamente, otro micromundo.</p><p> Para resolver el  micromundo pueden ejecutarse diversos&nbsp;algoritmos de búsqueda tanto informados como  desinformados.<br />
+<u>Heurísticas:</u> Calculamos la distancia existente entre nuestra
+posición y las esquinas, ya que allí están los planetas objetivos. De
+estas distancias escogemos la menor de todas.</p>
+  </div>
+<div class="articles">
+  <p><u>Garrafas:</u><br />
+    <u>Representación:</u><br />
+Representaremos el contenido de las dos garrafas con dos enteros que representan&nbsp;sus respectivas  cantidades.&nbsp;</p><p>Los operadores son llenar, vaciar o trasvasar el contenido de una garrafa en otra.<br />
+<u>Heurística:</u><br />
+Se calcula cuantos litros sobran o faltan para llegar al estado final.
+Vuantos menos litros falten, mejor será el valor heurístico.</p>
+  </div>
+<div class="articles">
+  <p><u>Granjero:</u><br />
+    <u>Representación:</u><br />Representamos
+la posición de los distintos elementos (granjero, col, lobo, cabra) con
+4 booleanos, suponiendo que todos empiezan en la orilla izquierda del
+río y&nbsp;que su ausencia de esta orilla indica que están en la orilla
+derecha.&nbsp;</p><p>Los operadores son los movimientos que puede hacer el granjero  y si viaja con otro elemento en la barca.<br />
+<u>Heurísticas:</u><br />
+Evaluamos cuantos elementos&nbsp;están en la orilla izquierda. Cuantos más  elementos estén peor será el valor heurístico.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Hanoi3:</u><br />
+    <u>Representación:</u> <br />Representamos
+la posición de los discos con 3 caracteres. Cada uno indica sobre qué
+se encuentra, siendo posible encontrarse sobre otro disco o sobre una
+de las bases del tablero.</p><p>El primer caracter representa el disco menor (A), el segundo el disco mediano (B) y el tercero el disco mayor (C).</p><p>Los operadores son mover cada disco a otra columna diferente de la que éste se encuentra.</p><p><u>Heurísticas:</u><br />
+La heurística evalúa el estado actual del tablero y&nbsp;los pasos que
+quedan para poner cada disco&nbsp;en la posición correcta. A mayor
+número de estos pasos necesario para llegar a la solcuión, peor será el
+valor heurístico. </p>
+  </div>
+
+<div class="articles">
+  <p><u> </u><u>Laberinto:</u><br />
+    <u>Representación:</u> <br />Representamos
+el laberinto como una matriz de casillas&nbsp;de camino o muro. Solo se
+podrá caminar a través de los caminos y siempre dentro de los limites
+del laberinto. Los operadores son mover el caminante a derecha,
+izquierda, arriba o abajo.<br />
+<u>Heurísticas:</u><br />
+La heurística empleada analiza la distancia que hay de la casilla en la que nos  encontramos a la casilla de salida.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Misioneros:</u><br />
+    <u>Representación:</u><br />Representamos
+el número de misioneros y caníbales que hay&nbsp;en la orilla izquierda
+y si la barca está o no también en la orilla izquierda.</p><p>Los operadores son mover uno o dos misioneros/canibales o uno de cada tipo a la vez.</p><p><u>Heurísticas:</u><br />
+a heurística implementada evalúa cuantos misioneros y caníbales falta
+por llevar a la orilla izquierda. Cuantos menos caníbales y misioneros
+falten por llevar a la orilla izquierda mejor será su valor heurístico.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Mono:</u> <br />
+    <u>Representación:</u> <br />Representamos
+los estados en los que se pueden encontrar el plátano, la caja y el
+mono, ya que son estados muy limitados.&nbsp;</p><p>El plátano solo
+puede estar en posesión del mono o no; la caja solo puede estar en 3
+posiciones distintas al igual que el mono; el mono puede encontrase
+subido a la caja o no.</p><p>Los operadores son mover el mono, mover la caja, subir/bajar a la caja y coger el plátano.</p><p><u>Heurísticas:</u><br />
+Hemos puntuado la distancia de la caja respecto al mono y respecto al
+plátano, si el mono está subido en la caja o no y a partir de ahí, un
+valor najo significa un movimiento prometedor y un valor alto poco
+prometedor.</p>
+  </div>
+
+<div class="articles">
+  
+  <p><u>Negras-Blancas:</u><br />
+    <u>Representación:</u><br />
+La representación para este problema es bastante clara, ya que solo es
+importante la situación de las fichas blancas y negras junto con la
+posición del hueco en el tablero. Solo necesitamos como operador la
+modificación de la posición del hueco para poder mover el resto de las
+fichas, quedando así el problema muchos mas simplificado que
+representado operadores para cada una de las fichas del tablero.&nbsp; <br />
+<u>Heurísticas:</u><br />
+La heurística&nbsp;evalúa el número de fichas blancas que hay a la derecha de cada ficha negra. A mayor número peor estado.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Pollitos:</u><br />
+    <u>Representación:</u><br />Representamos la situación de cada huevo en la huevera mediante una matriz de 5x2 de enteros cuyo valor significa lo siguiente:</p><p>0 - El huevo es blanco<br />1 - El huevo es azul<br />2 - El huevo es rojo<br />3 - Es pollito </p><p>Los operadores seleccionan cada huevo  posible de la huevera.<br />
+<u>Heurísticas:</u><br />La heurística mide el número de parejas de
+huevos en el mismo estado y devuelve la inversa de la suma de todas
+ellas. A mayor número de parejas con el mismo estado, mejor heurística.</p>
+  </div>
+<div class="articles">
+  <p><u>Puzzle-8:</u><br />
+    <u>Representación:</u><br />Representamos&nbsp;en qué posición está cada ficha del puzzle y también  dónde se encuentra el hueco mediante una matriz de 3x3.</p><p>Los operadores son mover el hueco arriba, abajo, izquierda o  derecha.<br />
+<u>Heurísticas:</u><br />
+Evaluamos cuál es la distancia de cada ficha hasta su posición final con la  distancia de manhattan. </p>
+  </div>
+<div class="articles">
+  <p><u> </u><u>Reinas:</u><br />
+    <u>Representación:</u> <br />Representamos&nbsp;este
+juego como un tablero de ajedrez normal, en el cual vamos colocando las
+reinas en una posición&nbsp;y analizando si se atacan entre ellas.</p><p>Los operadores son colocar una reina en una determinada posición<span style="text-decoration: underline;">.</span></p><p><span style="text-decoration: underline;"></span><u>Heurísticas:</u></p><p>Analizamos
+el tamaño del tablero y cuántas reinas nos faltan por poner en él.
+Cuantas menos reinas falten por colocar mejor valor heurístico se
+tendrá.</p>
+  </div>
+<div class="articles">
+  <p><u>Robot Limpiador:</u><br />
+    <u>Representación:</u><br />Representamos&nbsp;el
+estado de cada habitación (limpia o no) con una matriz de 3x3 y la
+posición del robot con un par de enteros.<span style="text-decoration: underline;"></span></p><p>Los operadores son mover el robot izquierda, derecha, arriba o abajo y limpiar una habitación.<span style="text-decoration: underline;"></span></p><p><u>Heurísticas:</u><br />
+Para la heurística de este problema sumamos la cantidad de habitaciones
+no limpias. Cuantas menos habitaciones no limpias queden, mejor valor
+heurístico tendremos.</p>
+  </div>
+
+<div class="articles">
+  <p><u>Viaje:</u><br />
+    <u>Representación:</u> <br />Representamos la ciudad en la que nos encontramos.</p><p>Los operadores son la lista de ciudades a los que nos podemos desplazar.</p><p>
+<u>Heurísticas:</u> <br />
+Esta heurística calcula la distancia de la ciudad a la que nos vamos a
+mover respecto a la ciudad objetivo. Por tanto a menor distancia mejor
+valor heurístico.</p>
+  </div>
+
+
+</div>
+
+<div class="left"> 
+<h2>Enlaces :</h2>
+<ul>
+   <li><a href="index.html">Inicio</a></li>
+   <li><a href="implementacion.html">Implementación del micromundo</a></li>
+   <li><a href="implementacion2.html">Implementación de los juegos</a></li>
+   <li><a href="uso.html">Uso</a></li>
+   <li><a href="analisis.html">Análisis</a></li>
+   <li><a href="conclusiones.html">Conclusiones</a></li>
+   </ul>
+</div>
+
+</div>
+<div style="clear: both;"> </div>
+
+<div id="footer"></div>
+</div>
+
+</body></html>
